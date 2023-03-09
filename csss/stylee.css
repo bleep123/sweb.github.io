@@ -1,51 +1,40 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 
-#navbar{
+#navbar {
     display: flex;
     align-items: center;
     position: sticky;
     top: 0px;
 }
 
-
-#navbar::before{
-    content: "";
-    background-color: black;
-    position: absolute;
-    top:0px;
-    left:0px;
-    height: 100%;
-    width:100%;
-    z-index: -1;
-    opacity: 0.7;
-}
-
-#logo{
+#logo {
     margin: 10px 34px;
+
 }
 
-#logo img{
+#logo img {
     height: 200px;
     margin: 3px 6px;
     border: 2px solid rgb(19, 18, 18);
     border-radius: 240px;
 }
 
-#navbar ul{
+
+#navbar ul {
     display: flex;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#navbar ul li{ 
+#navbar ul li {
     list-style: none;
     font-size: 1.3rem;
 }
 
-#navbar ul li a{
+#navbar ul li a {
     color: white;
     background-color: black;
     display: block;
@@ -55,38 +44,37 @@
     text-decoration: none;
 }
 
-#navbar ul li a:hover{
+#navbar ul li a:hover {
     color: black;
     background-color: white;
 }
 
-#home{
+#home {
     display: flex;
     flex-direction: column;
-    padding:3px 200px;
+    padding: 3px 200px;
     height: 550px;
     justify-content: center;
     align-items: center;
 }
 
-
-
-#home h1{
-    color:black;
+#home h1 {
+    color: maroon;
     text-align: center;
     font-family: 'Bree Serif', serif;
 }
 
 
 
-#home p{
-    color:black;
+#home h3 {
+    color: rgb(221, 247, 78);
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Bree Serif', serif;
+    
 }
 
-#education{
+#education {
     margin: 34px;
     display: flex;
     flex-direction: row;
@@ -94,86 +82,83 @@
     display: block;
 }
 
-
-
-#education .box{ 
+#education .box {
     border: 2px solid rgb(19, 18, 18);
     padding: 34px;
     margin: 2px 55px;
     border-radius: 28px;
     background: #7a51ae;
     margin-bottom: 20px;
-    width:85%
+    width: 85%
 }
 
-#education .box img{ 
-   height: 36px;
-   margin: auto;
-   display: flex;
-   flex-direction: column;
-   
+#education .box img {
+    height: 36px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
 }
 
-#education .box p{
+#education .box p {
     font-family: 'Bree Serif', serif;
 
-} 
+}
 
-#skills .box{ 
+#skills .box {
     border: 2px solid rgb(19, 18, 18);
     padding: 34px;
     margin: 2px 55px;
     border-radius: 28px;
     background: #c5c109;
     margin-bottom: 20px;
-    width:85%
-    
+    width: 85%
 }
 
-#skills .box img{ 
+#skills .box img {
     height: 36px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    
- }
 
-#experience .box{ 
+}
+
+#experience .box {
     border: 2px solid rgb(19, 18, 18);
     padding: 34px;
     margin: 2px 55px;
     border-radius: 28px;
     background: #1eb6ed;
     margin-bottom: 20px;
-    width:85%;
+    width: 85%;
 }
 
-#exp-box{
+#exp-box {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.exp{
+.exp {
     padding: 34px;
 }
 
-#exp-box img{
+#exp-box img {
     height: 124px;
 }
 
-#contact{
+#contact {
     position: relative;
 }
 
-#contact-box{
+#contact-box {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 34px;
 }
 
-#contact .box{ 
+#contact .box {
     border: 2px solid rgb(19, 18, 18);
     padding: 34px;
     margin: 2px 55px;
@@ -181,10 +166,10 @@
     background: #6a9a0a;
     margin-bottom: 20px;
     width: 700px;
-    width:85%
+    width: 85%
 }
 
-footer{
+footer {
     background: black;
     color: white;
     padding: 9px 20px;
@@ -192,46 +177,105 @@ footer{
 }
 
 
-.h-primary{
+.h-primary {
     font-family: 'Bree Serif', serif;
     font-size: 3.8rem;
     padding: 12px;
 }
 
-.h-secondary{
+.h-secondary {
     font-family: 'Bree Serif', serif;
     font-size: 2.3rem;
     padding: 12px;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
-body{
+body {
     background-color: #a40980;
+    background: url('../imgg/tech.jpg');
 }
+.bubbles img {
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+.bubbles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+       
+        opacity: 1;
+    }
+    70%{
+        
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+.bubbles img:nth-child(1){
+    animation-delay: 0s;
+} 
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+} 
+.bubbles img:nth-child(3){
+    animation-delay: 2s;
+} 
+.bubbles img:nth-child(4){
+    animation-delay: 1.5s;
+} 
+.bubbles img:nth-child(5){
+    animation-delay: 2.5s;
+} 
+.bubbles img:nth-child(6){
+    animation-delay: 3s;
+} 
+.bubbles img:nth-child(7){
+    animation-delay: 1s;
+} 
+.bubbles img:nth-child(8){
+    animation-delay: 0s;
+} 
 
 
-@media only screen and (max-width:810px){
+@media only screen and (max-width:810px) {
     #navbar ul {
         flex-direction: column;
     }
-   
+
     #education {
         margin: 78px;
     }
+
     footer {
         width: 109%;
     }
+
     .center {
         margin: 249px 1px;
     }
+
     #education .box {
         margin: 56px -71px;
         width: 284px;
         position: relative;
     }
+
     #experience .box {
         position: relative;
     }
@@ -239,12 +283,14 @@ body{
 
     #logo {
         margin: 10px 34px;
-       
+
     }
+
     #navbar::before {
         opacity: 0;
     }
-    #navbar ul li a{
+
+    #navbar ul li a {
         color: white;
         background-color: rgb(136, 124, 124);
         display: block;
@@ -253,16 +299,20 @@ body{
         border-radius: 20px;
         text-decoration: none;
     }
-    #experience{
+
+    #experience {
         position: relative;
     }
-    #skills{
+
+    #skills {
         position: relative;
     }
-    #education{
+
+    #education {
         position: relative;
     }
-    #home{
+
+    #home {
         position: relative;
     }
 }
